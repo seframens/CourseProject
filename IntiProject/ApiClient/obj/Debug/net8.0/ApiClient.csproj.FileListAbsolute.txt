@@ -1,0 +1,11 @@
+C:\Codes\CourseProject\IntiProject\ApiClient\bin\Debug\net8.0\ApiClient.deps.json
+C:\Codes\CourseProject\IntiProject\ApiClient\bin\Debug\net8.0\ApiClient.dll
+C:\Codes\CourseProject\IntiProject\ApiClient\bin\Debug\net8.0\ApiClient.pdb
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.AssemblyInfoInputs.cache
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.AssemblyInfo.cs
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.csproj.CoreCompileInputs.cache
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.dll
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\refint\ApiClient.dll
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.pdb
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ref\ApiClient.dll

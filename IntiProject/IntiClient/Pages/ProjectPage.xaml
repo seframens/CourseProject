@@ -1,0 +1,164 @@
+﻿<Page x:Class="IntiClient.Pages.ProjectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IntiClient.Pages"
+      xmlns:api="clr-namespace:ApiClient.Models.Responses;assembly=ApiClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProjectPage">
+
+    <Grid>
+        <Border Margin="10">
+            <StackPanel>
+                <DockPanel LastChildFill="False" Margin="0,0,0,10">
+                    <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                        <TextBlock Text="Проекты компании" Style="{StaticResource HeaderTextBlockStyle}" />
+                        <TextBlock Text="Управление проектами" Style="{StaticResource SubHeaderTextBlockStyle}" />
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right" Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,15,0">
+                            <TextBlock Text="{Binding FullName}" FontSize="16" FontFamily="Segoe UI" HorizontalAlignment="Right"/>
+                            <TextBlock Text="{Binding RoleName, StringFormat=' ({0})'}" FontSize="16" FontFamily="Segoe UI" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <Button x:Name="ImportButton" Content="Импортировать из csv-файла"
+                                Opacity="{Binding Source={x:Static api:UserSession.HasAdminAccess}, Converter={StaticResource BooleanToOpacityConverter}}" 
+                                IsEnabled="{Binding Source={x:Static api:UserSession.HasAdminAccess}}"
+                                Margin="5" Click="ImportButton_Click"/>
+                        <Button x:Name="ExportButton" Content="Экспортировать в pdf-файл"
+                                Opacity="{Binding Source={x:Static api:UserSession.HasAdminAccess}, Converter={StaticResource BooleanToOpacityConverter}}" 
+                                IsEnabled="{Binding Source={x:Static api:UserSession.HasAdminAccess}}"
+                                Margin="5" Click="ExportButton_Click"/>
+                        <Button x:Name="AddProjectButton" Content="+ Добавить проект" 
+                                Opacity="{Binding Source={x:Static api:UserSession.HasManagerAccess}, Converter={StaticResource BooleanToOpacityConverter}}" 
+                                IsEnabled="{Binding Source={x:Static api:UserSession.HasManagerAccess}}"
+                                Margin="5" Click="AddProjectButton_Click"/>
+                        <Button x:Name="LogoutButton" Content="→ Выйти" Margin="5" Click="LogoutButton_Click"/>
+                    </StackPanel>
+                </DockPanel>
+
+                <ScrollViewer>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock Text="Список проектов" Style="{StaticResource HeaderTextBlockStyle}" Margin="0,0,10,0"/>
+                                <TextBlock x:Name="ProjectCountLabel" Text="Всего проектов: 0 | Показано: 0" Style="{StaticResource SubHeaderTextBlockStyle}" />
+                            </StackPanel>
+
+                            <DockPanel LastChildFill="False" Margin="0,0,0,10">
+                                <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Label Content="Поиск по названию проекта: " Margin="10 0 10 10"/>
+                                    <TextBox x:Name="SearchTextBox" Width="400" Margin="0,0,10,0" TextChanged="SearchTextBox_TextChanged"
+                                             IsEnabled="{Binding Source={x:Static api:UserSession.HasGuestAccess}, Converter={StaticResource BooleanToOpacityConverter}}"/>
+                                    <Button x:Name="SortByDateAscButton" Content="Сорт. по дате ↑" Margin="5" Click="SortByDateAscButton_Click"
+                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasGuestAccess}, Converter={StaticResource BooleanToOpacityConverter}}"/>
+                                    <Button x:Name="SortByDateDescButton" Content="Сорт. по дате ↓" Margin="5" Click="SortByDateDescButton_Click"
+                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasGuestAccess}, Converter={StaticResource BooleanToOpacityConverter}}"/>
+                                    <Button x:Name="ResetButton" Content="Сброс" Margin="5" Click="ResetButton_Click"
+                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasGuestAccess}, Converter={StaticResource BooleanToOpacityConverter}}"/>
+                                </StackPanel>
+                                <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                    <Button x:Name="FiltersButton" Content="Фильтры" Margin="0,0,10,0" Click="FiltersButton_Click"
+                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasGuestAccess}, Converter={StaticResource BooleanToOpacityConverter}}"/>
+                                </StackPanel>
+                            </DockPanel>
+
+                            <StackPanel x:Name="FiltersPanel" Visibility="Collapsed" Margin="0,0,0,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Статус:" VerticalAlignment="Center" Margin="0,0,5,5" Style="{StaticResource BaseLabelStyle}"/>
+                                    <ComboBox x:Name="StatusFilterComboBox" Grid.Row="0" Grid.Column="1" Margin="0,0,10,5" VerticalAlignment="Center" Style="{StaticResource DefaultComboBoxStyle}"/>
+
+                                    <Label Grid.Row="0" Grid.Column="2" Content="Менеджер:" VerticalAlignment="Center" Margin="0,0,5,5" Style="{StaticResource BaseLabelStyle}"/>
+                                    <ComboBox x:Name="ManagerFilterComboBox" Grid.Row="0" Grid.Column="3" Margin="0,0,10,5" VerticalAlignment="Center" Style="{StaticResource DefaultComboBoxStyle}"/>
+
+                                    <Label Grid.Row="1" Grid.Column="0" Content="Дата от:" VerticalAlignment="Center" Margin="5,5,5,5" Style="{StaticResource BaseLabelStyle}"/>
+                                    <DatePicker x:Name="StartDatePicker" Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" VerticalAlignment="Center"/>
+                                    <Label Grid.Row="1" Grid.Column="2" Content="Дата до:" VerticalAlignment="Center" Margin="5,5,5,5" Style="{StaticResource BaseLabelStyle}"/>
+                                    <DatePicker x:Name="EndDatePicker" Grid.Row="1" Grid.Column="3" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                
+                                    <Button x:Name="ApplyFiltersButton" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Content="Применить фильтры" Margin="0,0,5,0" Click="ApplyFiltersButton_Click"/>
+                                    <Button x:Name="ClearFiltersButton" Grid.Row="2" Grid.Column="3" Content="Очистить фильтры" Margin="0,0,0,0" Click="ClearFiltersButton_Click"/>
+                                </Grid>
+                            </StackPanel>
+
+                            <DataGrid x:Name="ProjectsDataGrid"
+                                      AutoGenerateColumns="False" 
+                                      CanUserAddRows="False"       
+                                      CanUserReorderColumns="False"      
+                                      CanUserResizeColumns="False"
+                                      CanUserSortColumns="False" 
+                                      CanUserDeleteRows="False"
+                                      CanUserResizeRows="False"
+                                      IsReadOnly="True"
+                                      Margin="0,0,0,10" 
+                                      Style="{StaticResource ProjectDataGridStyle}"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalContentAlignment="Center"
+                                      MinRowHeight="50">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="Название" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Content="{Binding ProjectName}" Style="{StaticResource ProjectNameLinkButtonStyle}" Click="ProjectName_Click" Tag="{Binding ProjectNumber}" Margin="10 0 0 0"
+                                                        IsEnabled="{Binding Source={x:Static api:UserSession.HasManagerAccess}}"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Описание" Binding="{Binding Description}" IsReadOnly="True" Width="2*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}"/>
+                                    <DataGridTextColumn Header="Заказчик" Binding="{Binding Employer}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}"/>
+                                    <DataGridTextColumn Header="Руководитель проекта" Binding="{Binding ProjectManagerFullName}" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}"/>
+                                    <DataGridTextColumn Header="Дата заказа" Binding="{Binding ProjectDate, StringFormat=\{0:dd.MM.yyyy\}}" IsReadOnly="True" Width="*" 
+                                                        HeaderStyle="{StaticResource CenteredColumnHeaderStyle}"/>
+                                    <DataGridTemplateColumn Header="Статус" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Border Background="{Binding Status, Converter={StaticResource StatusToBrushConverter}}" Padding="5,2" CornerRadius="3">
+                                                    <TextBlock Text="{Binding Status}" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Действия" IsReadOnly="True" Width="*" HeaderStyle="{StaticResource CenteredColumnHeaderStyle}">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Button Content="&#x270E;" ToolTip="Редактировать" Margin="0,0,5,0" Click="EditButton_Click" Tag="{Binding ProjectNumber}"
+                                                            Opacity="{Binding Source={x:Static api:UserSession.HasManagerAccess}, Converter={StaticResource BooleanToOpacityConverter}}"
+                                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasManagerAccess}}"/>
+                                                    <Button Content="&#x1F5D1;" ToolTip="Удалить" Margin="0,0,5,0" Click="DeleteButton_Click" Tag="{Binding ProjectNumber}"
+                                                            Opacity="{Binding Source={x:Static api:UserSession.HasManagerAccess}, Converter={StaticResource BooleanToOpacityConverter}}" 
+                                                            IsEnabled="{Binding Source={x:Static api:UserSession.HasManagerAccess}}"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                                <Button x:Name="PrevPageButton" Content="Предыдущая" Margin="5" Click="PrevPageButton_Click" IsEnabled="False"/>
+                                <Label x:Name="PageInfoLabel" Content="Стр. 1 из 1" VerticalAlignment="Center" Margin="10,0"/>
+                                <Button x:Name="NextPageButton" Content="Следующая" Margin="5" Click="NextPageButton_Click" IsEnabled="False"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
