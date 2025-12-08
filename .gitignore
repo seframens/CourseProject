@@ -1,0 +1,12 @@
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+[Bb]in/
+[Oo]bj/
+*.suo
+*.cache
+packages/
+*.nupkg
+*.[Cc]ache
+*.bak
