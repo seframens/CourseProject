@@ -4,6 +4,7 @@ from datetime import date, datetime
 from typing import List, Optional
 import re
 
+# Валидация классов
 class ProjectDetails(BaseModel):
     ProjectNumber: int
     ProjectName: str

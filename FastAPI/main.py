@@ -8,7 +8,7 @@ from datetime import date
 from math import ceil
 
 from database import get_db, Project, ProjectManager, User, Role, WorkType, Qualification
-from models import (ProjectDetails, ProjectCreateSmart, ProjectUpdate, 
+from FastAPI.models import (ProjectDetails, ProjectCreateSmart, ProjectUpdate, 
                    UserLogin, UserAuthResponse, ProjectFilter, PaginatedResponse)
 
 app = FastAPI(title="ИНТИ API", version="1.0.0")
@@ -63,7 +63,6 @@ def login_user(login_data: UserLogin, db: Session = Depends(get_db)):
             message=f"Ошибка сервера: {str(e)}"
         )
 
-# === ОСНОВНОЙ ИНТЕРФЕЙС С ФИЛЬТРАЦИЕЙ И ПАГИНАЦИЕЙ ===
 
 @app.post("/projects/details", response_model=PaginatedResponse)
 def get_projects_details(
@@ -94,10 +93,10 @@ def get_projects_details(
             wt."Name" as work_type_name,
             p."ProjectDate" as project_date,
             p."Status" as status
-        FROM "Project" p
-        JOIN "ProjectManager" pm ON p."ProjectManagerId" = pm."ProjectManagerId" 
-        JOIN "Qualification" q ON pm."QualificationId" = q."QualificationId"
-        JOIN "WorkType" wt ON p."WorkTypeId" = wt."WorkTypeId"
+        FROM "IntiScheme"."Project" p
+        JOIN "IntiScheme"."ProjectManager" pm ON p."ProjectManagerId" = pm."ProjectManagerId" 
+        JOIN "IntiScheme"."Qualification" q ON pm."QualificationId" = q."QualificationId"
+        JOIN "IntiScheme"."WorkType" wt ON p."WorkTypeId" = wt."WorkTypeId"
         """
         
         conditions = []
@@ -137,7 +136,7 @@ def get_projects_details(
         data_query += where_clause
         
         # Добавляем сортировку и пагинацию к data_query
-        data_query += " ORDER BY p.\"ProjectId\" LIMIT :limit OFFSET :offset"
+        data_query += " ORDER BY p.\"ProjectId\" DESC LIMIT :limit OFFSET :offset"
         
         # Вычисляем offset для пагинации
         offset = (page - 1) * PROJECTS_PER_PAGE
@@ -184,11 +183,53 @@ def get_projects_details(
         logger.error(f"Ошибка при получении проектов: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Ошибка при получении проектов: {str(e)}")
 
-# === "УМНАЯ" ВСТАВКА ПРОЕКТА ===
+@app.get("/projects/{project_id}", response_model=ProjectDetails) 
+def get_project_by_id(project_id: int, db: Session = Depends(get_db)):
+    """
+    Получить детали проекта по его ID.
+    """
+
+    query_sql = """
+        SELECT
+            p."ProjectId" as project_number,
+            p."Name" as project_name,
+            p."Description" as description,
+            p."Employer" as employer,
+            pm."FullName" as project_manager_full_name,
+            q."Name" as project_manager_qualification, -- Включаем квалификацию
+            wt."Name" as work_type_name,              -- Включаем тип работ
+            p."ProjectDate" as project_date,
+            p."Status" as status
+        FROM "Project" p
+        JOIN "ProjectManager" pm ON p."ProjectManagerId" = pm."ProjectManagerId"
+        JOIN "Qualification" q ON pm."QualificationId" = q."QualificationId"
+        JOIN "WorkType" wt ON p."WorkTypeId" = wt."WorkTypeId" -- Джойним WorkType
+        WHERE p."ProjectId" = :project_id
+    """
+
+    result = db.execute(text(query_sql), {"project_id": project_id}).fetchone()
+
+    if result is None:
+        raise HTTPException(status_code=404, detail="Проект не найден")
+
+    project_data = {
+        "ProjectNumber": result.project_number,
+        "ProjectName": result.project_name,
+        "Description": result.description,
+        "Employer": result.employer,
+        "ProjectManagerFullName": result.project_manager_full_name,
+        "ProjectManagerQualification": result.project_manager_qualification,
+        "WorkTypeName": result.work_type_name,                     
+        "ProjectDate": result.project_date,
+        "Status": result.status
+    }
+
+    return ProjectDetails(**project_data)
+
 
 @app.post("/projects/create", response_model=dict)
 def create_project_smart(project_data: ProjectCreateSmart, db: Session = Depends(get_db)):
-    """Создать проект с автоматическим подбором менеджера и типа работ"""
+    """Создать проект с руководителем проекта и типом работы"""
     try:
         # Ищем менеджера по ФИО
         manager_query = """
@@ -256,8 +297,7 @@ def create_project_smart(project_data: ProjectCreateSmart, db: Session = Depends
         db.rollback()
         logger.error(f"Ошибка при создании проекта: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Ошибка при создании проекта: {str(e)}")
-
-# === ОБНОВЛЕНИЕ ПРОЕКТА ===
+    
 
 @app.put("/projects/{project_id}", response_model=dict)
 def update_project(project_id: int, project_data: ProjectUpdate, db: Session = Depends(get_db)):
@@ -333,7 +373,6 @@ def update_project(project_id: int, project_data: ProjectUpdate, db: Session = D
         logger.error(f"Ошибка при обновлении проекта: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Ошибка при обновлении проекта: {str(e)}")
 
-# === УДАЛЕНИЕ ПРОЕКТА ===
 
 @app.delete("/projects/{project_id}")
 def delete_project(project_id: int, db: Session = Depends(get_db)):
@@ -357,7 +396,6 @@ def delete_project(project_id: int, db: Session = Depends(get_db)):
         logger.error(f"Ошибка при удалении проекта: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Ошибка при удалении проекта: {str(e)}")
 
-# === СПИСКИ ДЛЯ ФОРМ ===
 
 @app.get("/managers/list")
 def get_managers_list(db: Session = Depends(get_db)):
