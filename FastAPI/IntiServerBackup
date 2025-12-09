@@ -1,0 +1,13 @@
+--
+-- PostgreSQL database cluster dump
+--
+
+-- Started on 2025-12-09 14:15:34 UTC
+
+\restrict SfvQtuVkEoC9LfbB27134vPeSKURTeRVF9p3jxjB25Qb9dkfBNFwCi8u73N9fQq
+
+SET default_transaction_read_only = off;
+
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+
