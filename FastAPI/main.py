@@ -8,7 +8,7 @@ from datetime import date
 from math import ceil
 
 from database import get_db, Project, ProjectManager, User, Role, WorkType, Qualification
-from FastAPI.models import (ProjectDetails, ProjectCreateSmart, ProjectUpdate, 
+from models import (ProjectDetails, ProjectCreateSmart, ProjectUpdate, 
                    UserLogin, UserAuthResponse, ProjectFilter, PaginatedResponse)
 
 app = FastAPI(title="ИНТИ API", version="1.0.0")
