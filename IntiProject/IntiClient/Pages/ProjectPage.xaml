@@ -152,7 +152,7 @@
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
                                 <Button x:Name="PrevPageButton" Content="Предыдущая" Margin="5" Click="PrevPageButton_Click" IsEnabled="False"/>
-                                <Label x:Name="PageInfoLabel" Content="Стр. 1 из 1" VerticalAlignment="Center" Margin="10,0"/>
+                                <Label x:Name="PageInfoLabel" Content="Стр. 1 из 1" VerticalAlignment="Center" Margin="10, 0, 10, 0"/>
                                 <Button x:Name="NextPageButton" Content="Следующая" Margin="5" Click="NextPageButton_Click" IsEnabled="False"/>
                             </StackPanel>
                         </StackPanel>

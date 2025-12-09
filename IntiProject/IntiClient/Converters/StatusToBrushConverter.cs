@@ -18,8 +18,8 @@ namespace IntiClient.Converters
                 return status switch
                 {
                     "Активен" => new SolidColorBrush(Color.FromArgb(255, 29, 29, 29)),// #1D1D1D (RGB: 29, 29, 29)
-                    "В очереди" => new SolidColorBrush(Color.FromArgb(255, 255, 204, 153)),// #FFEB3B (RGB: 255, 218, 185)
-                    "Завершен" => new SolidColorBrush(Color.FromArgb(255, 76, 187, 23)),// #4CAF50 (RGB: 76, 175, 80)
+                    "В очереди" => new SolidColorBrush(Color.FromArgb(255, 255, 204, 153)),// #FFEB3B (RGB: 255, 204, 153)
+                    "Завершен" => new SolidColorBrush(Color.FromArgb(255, 76, 187, 23)),// #4CAF50 (RGB: 76, 187, 23)
                     _ => new SolidColorBrush(Color.FromArgb(255, 200, 200, 200)),// Цвет по умолчанию, если статус неизвестен
                 };
             }

@@ -68,6 +68,7 @@ C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClien
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.AssemblyInfoInputs.cache
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.AssemblyInfo.cs
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.csproj.CoreCompileInputs.cache
+C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.sourcelink.json
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.csproj.Up2Date
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\IntiClient.dll
 C:\Codes\CourseProject\IntiProject\IntiClient\obj\Debug\net8.0-windows\refint\IntiClient.dll

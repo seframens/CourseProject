@@ -39,7 +39,7 @@
                     <Label Grid.Row="2" Grid.Column="0" Content="Руководитель:" Style="{StaticResource BaseLabelStyle}"/>
                     <TextBlock x:Name="ManagerFullNameTextBlock" Grid.Row="2" Grid.Column="1" Foreground="{StaticResource PrimaryTextBrush}" FontFamily="{StaticResource DefaultFontFamily}" FontSize="{StaticResource DefaultFontSize}" Margin="5,0"/>
 
-                    <Label Grid.Row="3" Grid.Column="0" Content="Квалификация руководителя:" Style="{StaticResource BaseLabelStyle}"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Основная квалификация руководителя:" Style="{StaticResource BaseLabelStyle}"/>
                     <TextBlock x:Name="ManagerQualificationTextBlock" Grid.Row="3" Grid.Column="1" Foreground="{StaticResource PrimaryTextBrush}" FontFamily="{StaticResource DefaultFontFamily}" FontSize="{StaticResource DefaultFontSize}" Margin="5,0"/>
 
                     <Label Grid.Row="4" Grid.Column="0" Content="Тип работ:" Style="{StaticResource BaseLabelStyle}"/>

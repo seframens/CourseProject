@@ -3,24 +3,84 @@
   "WorkspaceRootPath": "C:\\Codes\\CourseProject\\IntiProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\authorizationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\authorizationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\authorizationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\authorizationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\lists\\statuslistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\lists\\statuslistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\events\\projectevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\events\\projectevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\responses\\projectfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\responses\\projectfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\responses\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\responses\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\lists\\managerlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\lists\\managerlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\lists\\worktypelistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\lists\\worktypelistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projecteditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projecteditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projecteditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projecteditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projectdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projectdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projectdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projectdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|c:\\codes\\courseproject\\intiproject\\apiclient\\models\\responses\\projectdetailsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E8479E-1674-40E4-8EA6-4874D24187EB}|ApiClient\\ApiClient.csproj|solutionrelative:apiclient\\models\\responses\\projectdetailsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\converters\\booleantovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\converters\\booleantovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\pages\\projectpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\pages\\projectpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\converters\\statustobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\converters\\statustobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|c:\\codes\\courseproject\\intiproject\\inticlient\\events\\projectevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FEF8265-DB4E-4D88-81D7-0175A47E49DE}|IntiClient\\IntiClient.csproj|solutionrelative:inticlient\\events\\projectevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +102,210 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorizationPage.xaml.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\AuthorizationPage.xaml.cs",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\AuthorizationPage.xaml.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\AuthorizationPage.xaml.cs",
+              "RelativeToolTip": "IntiClient\\Pages\\AuthorizationPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:03:32.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthorizationPage.xaml",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\AuthorizationPage.xaml",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\AuthorizationPage.xaml",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\AuthorizationPage.xaml",
+              "RelativeToolTip": "IntiClient\\Pages\\AuthorizationPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T13:03:31.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "StatusListModel.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\StatusListModel.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Lists\\StatusListModel.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\StatusListModel.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Lists\\StatusListModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:03:04.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkTypeListModel.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\WorkTypeListModel.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Lists\\WorkTypeListModel.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\WorkTypeListModel.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Lists\\WorkTypeListModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:03:03.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\App.xaml",
+              "RelativeDocumentMoniker": "IntiClient\\App.xaml",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\App.xaml",
+              "RelativeToolTip": "IntiClient\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T13:01:22.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectEditPage.xaml",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectEditPage.xaml",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectEditPage.xaml",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectEditPage.xaml",
+              "RelativeToolTip": "IntiClient\\Pages\\ProjectEditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T13:00:33.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProjectDetailsModel.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\ProjectDetailsModel.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Responses\\ProjectDetailsModel.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\ProjectDetailsModel.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Responses\\ProjectDetailsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:59:32.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManagerListModel.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\ManagerListModel.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Lists\\ManagerListModel.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Lists\\ManagerListModel.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Lists\\ManagerListModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:59:21.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectFilter.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\ProjectFilter.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Responses\\ProjectFilter.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\ProjectFilter.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Responses\\ProjectFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:59:16.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\UserSession.cs",
+              "RelativeDocumentMoniker": "ApiClient\\Models\\Responses\\UserSession.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Models\\Responses\\UserSession.cs",
+              "RelativeToolTip": "ApiClient\\Models\\Responses\\UserSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:59:14.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProjectDetailsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectDetailsPage.xaml.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectDetailsPage.xaml.cs",
+              "RelativeToolTip": "IntiClient\\Pages\\ProjectDetailsPage.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:58:29.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectDetailsPage.xaml",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectDetailsPage.xaml",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectDetailsPage.xaml",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectDetailsPage.xaml",
+              "RelativeToolTip": "IntiClient\\Pages\\ProjectDetailsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T12:58:27.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "IntiClient\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\MainWindow.xaml.cs",
+              "RelativeToolTip": "IntiClient\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T11:12:13.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectEditPage.xaml.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectEditPage.xaml.cs",
+              "RelativeToolTip": "IntiClient\\Pages\\ProjectEditPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T10:27:44.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StatusToBrushConverter.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Converters\\StatusToBrushConverter.cs",
+              "RelativeDocumentMoniker": "IntiClient\\Converters\\StatusToBrushConverter.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Converters\\StatusToBrushConverter.cs",
+              "RelativeToolTip": "IntiClient\\Converters\\StatusToBrushConverter.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBMAAAByAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T20:17:26.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BooleanToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Converters\\BooleanToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "IntiClient\\Converters\\BooleanToVisibilityConverter.cs",
+              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Converters\\BooleanToVisibilityConverter.cs",
+              "RelativeToolTip": "IntiClient\\Converters\\BooleanToVisibilityConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T20:17:26.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ProjectEvent.cs",
               "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Events\\ProjectEvent.cs",
               "RelativeDocumentMoniker": "IntiClient\\Events\\ProjectEvent.cs",
@@ -50,12 +313,11 @@
               "RelativeToolTip": "IntiClient\\Events\\ProjectEvent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T16:50:42.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T16:50:42.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "ProjectPage.xaml",
               "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectPage.xaml",
               "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectPage.xaml",
@@ -67,40 +329,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "ApiClient\\Services\\ApiService.cs",
               "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\ApiClient\\Services\\ApiService.cs",
               "RelativeToolTip": "ApiClient\\Services\\ApiService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAANIAAABCAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-28T22:01:12.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "ProjectPage.xaml.cs",
               "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectPage.xaml.cs",
               "RelativeDocumentMoniker": "IntiClient\\Pages\\ProjectPage.xaml.cs",
               "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\Pages\\ProjectPage.xaml.cs",
               "RelativeToolTip": "IntiClient\\Pages\\ProjectPage.xaml.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAMsBAAAAAAAA",
+              "ViewState": "AQIAAPUBAAAAAAAAAAAAACUCAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T21:32:17.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\App.xaml",
-              "RelativeDocumentMoniker": "IntiClient\\App.xaml",
-              "ToolTip": "C:\\Codes\\CourseProject\\IntiProject\\IntiClient\\App.xaml",
-              "RelativeToolTip": "IntiClient\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-06T21:27:01.382Z",
               "EditorCaption": ""
             }
           ]

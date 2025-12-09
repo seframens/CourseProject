@@ -9,7 +9,6 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using System.Collections.ObjectModel;
-using System.Reflection.Metadata;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -344,7 +343,7 @@ namespace IntiClient.Pages
                         {
                             MessageBox.Show($"Неверный формат даты '{dateString}' в строке файла. Ожидается dd.MM.yyyy.", "Ошибка импорта", MessageBoxButton.OK, MessageBoxImage.Warning);
                             errorCount++;
-                            continue; 
+                            continue;
                         }
 
                         string status = fields[statusIndex]?.Trim() ?? string.Empty;
@@ -353,7 +352,7 @@ namespace IntiClient.Pages
                         {
                             MessageBox.Show($"Пустые обязательные поля в строке файла: Name='{name}', ProjectManagerFullName='{projectManagerFullName}', WorkTypeName='{workTypeName}', Status='{status}'", "Ошибка импорта", MessageBoxButton.OK, MessageBoxImage.Warning);
                             errorCount++;
-                            continue; 
+                            continue;
                         }
 
                         var createData = new CreateProjectRequestModel
@@ -369,7 +368,7 @@ namespace IntiClient.Pages
 
                         var result = await _apiService.CreateProjectAsync(createData);
 
-                        if (result.Success) 
+                        if (result.Success)
                         {
                             importedCount++;
                         }
@@ -476,14 +475,14 @@ namespace IntiClient.Pages
 
                                     table.Header(header =>
                                     {
-                                        header.Cell().Element(CellStyle).Text("ID"); 
-                                        header.Cell().Element(CellStyle).Text("Название"); 
-                                        header.Cell().Element(CellStyle).Text("Описание"); 
+                                        header.Cell().Element(CellStyle).Text("ID");
+                                        header.Cell().Element(CellStyle).Text("Название");
+                                        header.Cell().Element(CellStyle).Text("Описание");
                                         header.Cell().Element(CellStyle).Text("Заказчик");
-                                        header.Cell().Element(CellStyle).Text("Руководитель проекта"); 
-                                        header.Cell().Element(CellStyle).Text("Тип работ"); 
-                                        header.Cell().Element(CellStyle).Text("Дата"); 
-                                        header.Cell().Element(CellStyle).Text("Статус"); 
+                                        header.Cell().Element(CellStyle).Text("Руководитель проекта");
+                                        header.Cell().Element(CellStyle).Text("Тип работ");
+                                        header.Cell().Element(CellStyle).Text("Дата");
+                                        header.Cell().Element(CellStyle).Text("Статус");
 
                                         static IContainer CellStyle(IContainer container)
                                         {
@@ -493,14 +492,14 @@ namespace IntiClient.Pages
 
                                     foreach (var project in projects)
                                     {
-                                        table.Cell().Element(CellStyle).Text(project.ProjectNumber.ToString()); 
+                                        table.Cell().Element(CellStyle).Text(project.ProjectNumber.ToString());
                                         table.Cell().Element(CellStyle).Text(project.ProjectName);
                                         table.Cell().Element(CellStyle).Text(project.Description);
                                         table.Cell().Element(CellStyle).Text(project.Employer);
-                                        table.Cell().Element(CellStyle).Text(project.ProjectManagerFullName); 
-                                        table.Cell().Element(CellStyle).Text(project.WorkTypeName); 
-                                        table.Cell().Element(CellStyle).Text(project.ProjectDate.ToString("dd.MM.yyyy")); 
-                                        table.Cell().Element(CellStyle).Text(project.Status); 
+                                        table.Cell().Element(CellStyle).Text(project.ProjectManagerFullName);
+                                        table.Cell().Element(CellStyle).Text(project.WorkTypeName);
+                                        table.Cell().Element(CellStyle).Text(project.ProjectDate.ToString("dd.MM.yyyy"));
+                                        table.Cell().Element(CellStyle).Text(project.Status);
 
                                         static IContainer CellStyle(IContainer container)
                                         {

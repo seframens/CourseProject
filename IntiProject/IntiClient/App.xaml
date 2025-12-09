@@ -357,7 +357,6 @@
             <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
             <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Margin" Value="{StaticResource ControlMargin}"/>
             <Setter Property="Template">
                 <Setter.Value>

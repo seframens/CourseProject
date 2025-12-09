@@ -9,3 +9,4 @@ C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.dll
 C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\refint\ApiClient.dll
 C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.pdb
 C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ref\ApiClient.dll
+C:\Codes\CourseProject\IntiProject\ApiClient\obj\Debug\net8.0\ApiClient.sourcelink.json

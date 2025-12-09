@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntiClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+040463d3665a0f03de2d67a1fc84ede2007d16b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntiClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntiClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
